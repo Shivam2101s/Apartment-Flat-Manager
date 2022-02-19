@@ -66,7 +66,7 @@ export const Login = () => {
         placeholder="Email"
       />
       <input
-        type="text"
+        type="password"
         onChange={handleChange}
         name="password"
         placeholder="Password"
