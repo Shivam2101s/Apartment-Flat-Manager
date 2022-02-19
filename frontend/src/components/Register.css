@@ -1,0 +1,47 @@
+#regDiv {
+    border: 1px solid #f3ebe0;
+    width: 28%;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    backdrop-filter: blur(7px);
+  }
+  #regDiv:hover {
+    box-shadow: rgba(119, 119, 119, 0.35) 3px 5px 15px;
+  }
+  #regDiv h1 {
+    color: #378b8a;   
+    font-size:40px;
+  }
+  #regDiv input {
+    width: 80%;
+    height: 30px;
+    outline: none;
+    border: 1px solid #d5d5d6;
+    padding-left: 10px;
+  }
+  #regBtn {
+    border:2px solid rgb(127, 216, 216);
+    padding:8px 30px ;
+    margin-top: 30px;
+    font-size:16px;
+    color: #54BAB9;
+   background-color:#e2f0ef;
+   transition: 0.5s;
+  }
+  #regBtn:hover {
+    background-color: white;
+  }
+  #logLine{
+  font-size:16px;
+  color:#f3ebe0;
+  }
+  #logLink{
+    text-decoration: none;
+    color:#54BAB9;
+    font-weight: 500;
+  }

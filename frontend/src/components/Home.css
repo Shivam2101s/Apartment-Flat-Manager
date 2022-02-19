@@ -1,0 +1,28 @@
+
+#homeDiv_1{
+    width: 40%;
+    text-align: center;
+    margin:13% auto;
+}
+#homeDiv_1 h1 {
+    color: rgb(82, 179, 170);
+    font-size:40px ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#homeDiv_1 p {
+    color: #494949;
+   font-size:18px;
+}
+#homeDiv_1 button {
+    border:2px solid rgb(127, 216, 216);
+    padding:8px 30px ;
+    margin-top: 30px;
+    font-size:16px;
+    color: #54BAB9;
+    border-radius: 2px;
+   background-color:#e2f0ef
+}
+#homeDiv_1 button:hover{
+    background-color:white;
+    cursor:pointer;
+}
