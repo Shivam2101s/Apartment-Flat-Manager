@@ -21,10 +21,13 @@ export const Navbar = () => {
       <Link className="link" to={"/"}>
         Home
       </Link>
+      {token === null ? 
+      <Link className="link" to={"/login"}>Log In</Link> :
       <button id="logoutBtn" onClick={logout}>
-          {" "}
-          {token === null ? "Login" : "Logout"}
+         Log Out
         </button>
+       
+      }
     </div>
   );
 };

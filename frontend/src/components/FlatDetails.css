@@ -31,3 +31,23 @@
   height: 574px;
   overflow-y: scroll;
 }
+
+#backBtn{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  position: absolute;
+  top: 12vh;
+  left: 8vh;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #54BAB9; 
+  border: 1px solid #54BAB9 ;
+  background-color: rgb(218, 218, 218);
+  transition: 0.5s;
+}
+#backBtn:hover{
+  background-color:white;
+}

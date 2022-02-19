@@ -40,6 +40,28 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+router.get("/sort/:value", async (req, res) => {
+  try {
+    const page = +req.query.page || 1;
+    const size = +req.query.size || 4;
+    const skip = (page-1)*size;
+    const totalPage = Math.ceil((await Flat.find().countDocuments()) / size);
+
+    if(req.params.value === "lowToHigh"){
+      let flats = await Flat.find().sort({flat_number:1}).skip(skip).limit(size).populate("residents").lean().exec();
+
+      return res.status(201).send({flats,totalPage} );
+    }else if(req.params.value  === "highToLow"){
+      let flats = await Flat.find().sort({flat_number:-1}).skip(skip).limit(size).populate("residents").lean().exec();
+
+      return res.status(201).send({flats,totalPage} );
+    }
+    
+  } catch (e) {
+   return res.status(500).json({ status: "Failed", message: e.message });
+  }
+});
+
 router.patch("/:id", async (req, res) => {
   try {
     let flat = await Flat.findByIdAndUpdate(req.params.id, req.body, {
@@ -53,6 +75,8 @@ router.patch("/:id", async (req, res) => {
    return res.status(500).json({ status: "Failed", message: e.message });
   }
 });
+
+
 
 
 module.exports = router;

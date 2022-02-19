@@ -13,7 +13,7 @@ export const Flat = () => {
 
   const getData = () => {
     try {
-      fetch(`http://localhost:4500/flat?page=${page}&limit=5`)
+      fetch(`http://localhost:4500/flat?page=${page}`)
         .then((d) => d.json())
         .then((res) => {
           setData(res.flats);
@@ -25,8 +25,47 @@ export const Flat = () => {
     }
   };
 
+  const sorting=(value)=>{
+    try {
+      fetch(`http://localhost:4500/flat/sort/${value}`)
+        .then((d) => d.json())
+        .then((res) => {
+          setData(res.flats);
+          setLimit(res.totalPage);
+          console.log(res.flats);
+        });
+    } catch (err) {
+      console.log("Error:", err);
+    }
+  };
+
+
+
   return (
     <div id="flatDivMain">
+      <div id="sort_filter_div">
+        <h1 id="sort_filter_div_head">Sort and Filter</h1>
+        <div id="sortDiv">
+          <select name="" id="sortbyFlatNumber" onChange={sorting}>
+            <option value="">Sort by Flat Number</option>
+            <option value="lowtoHigh">(Low To High)</option>
+            <option value="HighToLow">(High to low)</option>
+          </select>
+         <div id="filterDiv">
+           <div>
+               <input type="checkBox" name="A" />   <label htmlFor="A">A-Block</label> 
+           </div>
+       <div>
+          <input type="checkBox" name="B" />   <label htmlFor="B">B-Block</label>
+       </div>
+         
+        <div>
+        <input type="checkBox" name="C" />   <label htmlFor="C">C-Block</label>  
+        </div>
+         </div>  
+        
+        </div>
+      </div>
 <div id="flatList">
       <table>
         <tr>
