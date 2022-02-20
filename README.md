@@ -18,7 +18,7 @@
 
 # Flat Details Page
 
-<img src="https://github.com/Shivam2101s/images/blob/main/makeMyHouse4.jpg?raw=true">
+<img src="https://github.com/Shivam2101s/images/blob/main/makeMyHouse3.jpg?raw=true">
 
 
 ## Technology used
