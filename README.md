@@ -23,5 +23,5 @@
 
 ## Technology used
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/94/MERN-logo.png" width="50%" height="100px" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/94/MERN-logo.png" width="40%" height="100px" />
 
