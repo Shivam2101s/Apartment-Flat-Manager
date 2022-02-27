@@ -11,7 +11,7 @@ export const Login = () => {
   const navigate = useNavigate();
 
   const login = () => {
-    fetch(`https://apartment-flat-manager.herokuapp.com/${form.email}`, {
+    fetch(`https://apartment-flat-manager.herokuapp.com/manager/${form.email}`, {
       method: "POST",
       body: JSON.stringify(form),
       headers: { "content-type": "application/json" },
