@@ -13,7 +13,7 @@ export const FlatDetails = () => {
 
   const getData = () => {
     try {
-      fetch(`http://localhost:4500/flat/${id}`)
+      fetch(`https://apartment-flat-manager.herokuapp.com/flat/${id}`)
         .then((d) => d.json())
         .then((res) => {
           setData(res);
